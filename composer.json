@@ -2,6 +2,7 @@
     "name": "hermesmartins/php-ean13-validator",
     "description": "This package has the function to validate an EAN with 13 numbers.",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Hermes Davy Martins",
@@ -9,7 +10,7 @@
         }
     ],
     "require": {
-      "php": ">=5.6.3"
+      "php": ">=5.4.0"
     },
     "require-dev": {
       "phpunit/phpunit": "~4.0"
