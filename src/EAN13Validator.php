@@ -11,6 +11,7 @@ class EAN13Validator
 
     /**
      * @param $ean
+     * @return bool
      */
     public function isAValidEAN13($ean)
     {
