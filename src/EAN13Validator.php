@@ -26,13 +26,17 @@ class EAN13Validator
 
         for ($i = 0; $i < count($eanAsArray)-1; $i++) {
             if ($i % 2 === 0) {
-                $sumEvenIndexes += $eanAsArray[$i];
+                $sumOddIndexes  += $eanAsArray[$i];
             } else {
-                $sumOddIndexes += $eanAsArray[$i];
+                $sumEvenIndexes += $eanAsArray[$i];
             }
         }
 
-        $rest = ((3 * $sumOddIndexes) + $sumEvenIndexes) % 10;
+        $rest = ($sumOddIndexes + (3 * $sumEvenIndexes)) % 10;
+
+        if ($rest !== 0) {
+            $rest = 10 - $rest;
+        }
 
         return $rest === $eanAsArray[12];
     }

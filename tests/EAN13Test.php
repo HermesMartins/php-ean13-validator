@@ -19,7 +19,9 @@ class EAN13Test extends PHPUnit_Framework_TestCase
 
     public function test_is_a_valid_ean_13()
     {
-        $this->assertTrue($this->ean13ValidatorModel->isAValidEAN13(7890001804645));
+//        $this->assertTrue($this->ean13ValidatorModel->isAValidEAN13(7890001804645));
+
+        $this->assertTrue($this->ean13ValidatorModel->isAValidEAN13(7891153041407));
     }
 
     public function test_is_a_invalid_ean_13()
